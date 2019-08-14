@@ -1,6 +1,6 @@
 class PostController < ApplicationController
 
     def index
-        render json: User.all
+        render json: Post.all
     end
 end
