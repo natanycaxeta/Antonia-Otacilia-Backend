@@ -1,8 +1,8 @@
 User.destroy_all
 Post.destroy_all
 
-elizabete = User.create(name: "Elizabete", username: "bete", password_digest: "password")
-luci = User.create(name: "Luci", username: "luci", password_digest: "password")
+elizabete = User.create(name: "Elizabete", username: "bete", password: "password")
+luci = User.create(name: "Luci", username: "luci", password: "password")
 
 Post.create(name: "Diarísta", description: "Procuro diarísta para trabalhar três vezes na semana", likes: 0, address: "Formosinha", tipo: "Emprego")
 Post.create(name: "Cozinheira", description: "Procuro cozinheira para trabalhar três vezes na semana", likes: 0, address: "Formosinha", tipo: "Emprego")
