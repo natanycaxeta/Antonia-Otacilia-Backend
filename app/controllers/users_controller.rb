@@ -1,11 +1,11 @@
-class UserController < ApplicationController
+class UsersController < ApplicationController
     
     def show
         token = request.headers["Authentication"].split(" ")[1]
         payload = decode(token)
         user = User.find(payload["user_id"])
         if user
-          render json: user, status: :accepted
+          render json: user(default_format), status: :accepted
         else
           render json: {message: "Error", authenticated: false}
         end
@@ -17,11 +17,16 @@ class UserController < ApplicationController
         render json: User.all
     end
 
-    # def create 
-    #     user = User.find_by(username: params[:username])
-    #     if user 
-    #         return render json: user
-    #     end
-    # end
+private
+
+def default_format
+  {
+    :include => {
+      :posts => {
+        
+      }
+    }
+  }
+end
 
 end

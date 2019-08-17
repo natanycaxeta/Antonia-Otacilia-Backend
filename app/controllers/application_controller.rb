@@ -1,5 +1,5 @@
 require 'jwt'
-s
+
 class ApplicationController < ActionController::API
 
     def secret_key
