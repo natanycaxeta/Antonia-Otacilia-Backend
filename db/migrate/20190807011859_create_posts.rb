@@ -5,6 +5,7 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       t.string :description
       t.integer :likes
       t.string :address
+      t.integer :contact
       t.string :tipo
 
       t.timestamps

@@ -5,7 +5,7 @@ class UsersController < ApplicationController
         payload = decode(token)
         user = User.find(payload["user_id"])
         if user
-          render json: user(default_format), status: :accepted
+          render json: user, status: :accepted
         else
           render json: {message: "Error", authenticated: false}
         end

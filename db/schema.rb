@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2019_08_07_011923) do
     t.string "description"
     t.integer "likes"
     t.string "address"
+    t.integer "contact"
     t.string "tipo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
