@@ -12,6 +12,15 @@ class PostController < ApplicationController
 
     end
 
+    def create 
+        @post = Post.create(strong_params)
+        render json: @post
+    end
 
+private
+     
+    def strong_params
+        params.require(:post).permit(:name, :description, :likes, :address, :contact, :tipo) 
+    end
     
 end
