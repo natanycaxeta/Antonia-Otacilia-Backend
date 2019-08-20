@@ -17,6 +17,12 @@ class PostController < ApplicationController
         render json: @post
     end
 
+    def destroy
+        #want to remove the cat with id, and send back cat
+        Post.find(params[:id]).destroy
+        # render json: 
+      end
+
 private
      
     def strong_params
