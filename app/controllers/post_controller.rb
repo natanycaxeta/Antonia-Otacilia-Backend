@@ -12,6 +12,12 @@ class PostController < ApplicationController
 
     end
 
+    def update
+        #want to update the cat with id, and send back cat
+        Post.find(params[:id]).update(strong_params)
+        render json: Post.find(params[:id]).to_json(strong_params)
+      end
+
     def create 
         @post = Post.create(strong_params)
         render json: @post
@@ -19,8 +25,8 @@ class PostController < ApplicationController
 
     def destroy
         #want to remove the cat with id, and send back cat
-        Post.find(params[:id]).destroy
-        # render json: 
+        @post = Post.find(params[:id]).destroy
+        render json: @post
       end
 
 private
