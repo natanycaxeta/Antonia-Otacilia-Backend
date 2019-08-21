@@ -2,7 +2,9 @@ class PostController < ApplicationController
 
     def index
 
-        render json: Post.all
+        render json: Post.all.to_json(:include => {
+            :users => {:only => [:id, :name, :username]}
+        })
           
     end
 
@@ -20,7 +22,9 @@ class PostController < ApplicationController
 
     def create 
         @post = Post.create(strong_params)
-        render json: @post
+        render json: @post.to_json(:include => {
+            :users => {:only => [:id, :name, :username]}
+        })
     end
 
     def destroy

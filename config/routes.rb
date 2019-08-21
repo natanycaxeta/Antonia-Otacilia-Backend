@@ -3,5 +3,5 @@ Rails.application.routes.draw do
     resources :post, only: [:index, :show, :create, :destroy, :update]
     resources :user_post, only: [:index, :create, :destroy]
     post '/login', to: 'auth#create' #needs the username and password
-    get '/profile', to: 'users#show' #take in the token
+    get '/profile', to: 'users#home' #take in the token
 end
