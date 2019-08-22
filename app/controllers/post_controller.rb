@@ -16,8 +16,9 @@ class PostController < ApplicationController
 
     def update
         #want to update the cat with id, and send back cat
-        Post.find(params[:id]).update(strong_params)
-        render json: Post.find(params[:id]).to_json(strong_params)
+        @post = Post.find(params[:id])
+        @post.update(strong_params)
+        render json: @post
       end
 
     def create 
