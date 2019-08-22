@@ -3,7 +3,7 @@ class PostController < ApplicationController
     def index
 
         render json: Post.all.to_json(:include => {
-            :users => {:only => [:id, :name, :username]}
+            :user => {:only => [:id, :name, :username]}
         })
           
     end
@@ -23,7 +23,7 @@ class PostController < ApplicationController
     def create 
         @post = Post.create(strong_params)
         render json: @post.to_json(:include => {
-            :users => {:only => [:id, :name, :username]}
+            :user => {:only => [:id, :name, :username]}
         })
     end
 
@@ -36,7 +36,7 @@ class PostController < ApplicationController
 private
      
     def strong_params
-        params.require(:post).permit(:name, :description, :likes, :address, :contact, :tipo) 
+        params.require(:post).permit(:name, :description, :likes, :address, :contact, :tipo, :user_id, :id) 
     end
     
 end

@@ -1,4 +1,4 @@
-class UserPost < ApplicationRecord
-    belongs_to :user
-    belongs_to :post
-end
+# class UserPost < ApplicationRecord
+#     belongs_to :user
+#     belongs_to :post
+# end
