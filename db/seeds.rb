@@ -20,5 +20,8 @@ post6 = Post.create(name: "aulas de artesanato", description: "aulas de artesana
 
 post7 = Post.create(name: "aula de Automaquiagem", description: "aula de automaquiagem", likes: 0, address: "Jardim Califórnia", contact: 6136422262, tipo: "Evento", user_id:luci.id )
 # UserPost.create!,(user_id:  elizabete.id, post_id: post7.id)
-post8 = Post.create(name: "Como encontrar um emprego", description: "Como encontrar um emprego, dicas de especialistas em RH", likes: 0, address: "Bela Vista", contact: 6136422262, tipo: "Evento", user_id: luci.id)
+post8 = Post.create(name: "Como encontrar um emprego", description: "Como encontrar um emprego, dicas de especialistas em RH", likes: 0, address: "Bela Vista", contact: 6136422262, tipo: "Evento", user_id: elizabete.id)
 # UserPost.create!,(user_id:  elizabete.id, post_id: post8.id)
+post9 = Post.create(name: "Maquiagem básica", description: "Como encontrar um emprego, dicas de especialistas em RH", likes: 0, address: "Bela Vista", contact: 6136422262, tipo: "Cursos", user_id: elizabete.id)
+post10 = Post.create(name: "Escova Progressiva", description: "Como encontrar um emprego, dicas de especialistas em RH", likes: 0, address: "Bela Vista", contact: 6136422262, tipo: "Cursos", user_id: elizabete.id)
+post11 = Post.create(name: "Galinhada Solidária", likes: 0, address: "Bela Vista", contact: 6136422262, tipo: "Evento", user_id: elizabete.id)
